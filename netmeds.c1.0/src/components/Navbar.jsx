@@ -176,7 +176,7 @@ export const Navbar = () => {
         </div>
 
         <div className={styles.loginbtn}>
-          <Avatar src="/broken-image.jpg" />
+          <Avatar   width="10px" />
           <div></div>
           signin/signup
         </div>

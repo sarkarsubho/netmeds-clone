@@ -8,8 +8,11 @@ import Divider from "@mui/material/Divider";
 
 export const Footer = () => {
   return (
-    <>
+    <><br />
+        <hr />
+        <br />
       <div className={styles.main}>
+        
         <div>
           <h4>COMPANY</h4>
           <p>About Netmeds </p>
