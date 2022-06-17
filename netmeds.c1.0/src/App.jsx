@@ -13,6 +13,7 @@ function App() {
 
       <Routes>
         <Route path={"/"} element={<Home></Home>}></Route>
+        <Route path={"/product/:id"}></Route>
       </Routes>
 
       <Footer></Footer>

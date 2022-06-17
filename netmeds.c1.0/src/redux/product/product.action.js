@@ -7,6 +7,6 @@ export const GET_PRODUCT_ERROR="GET_PRODUCT_ERROR";
 export const getProduct=()=>(dispatch)=>{
 dispatch({type:GET_PRODUCT_LOADING});
 
-axios.get("").then(res=>dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data})).catch(err=>dispatch({type:GET_PRODUCT_ERROR}))
+axios.get("http://localhost:8080/product").then(res=>dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data})).catch(err=>dispatch({type:GET_PRODUCT_ERROR}))
 
 }

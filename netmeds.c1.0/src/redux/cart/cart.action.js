@@ -1,6 +1,11 @@
+import axios from "axios"
 
+export const ADD_TO_CART="ADD_TO_CART"
 
 export const 
-addToCart=add=>{
-
+addToCart=(payload)=>(dispatch)=>{
+  
+    axios.post(" http://localhost:8080/cart",payload)
+    dispatch({type:ADD_TO_CART,payload:{...payload,count:1}})
+    // console.log(payload);
 }

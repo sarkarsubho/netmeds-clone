@@ -22,6 +22,7 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useSelector } from "react-redux";
 
 
 const StyledMenu = styled((props) => (
@@ -75,6 +76,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export const Navbar = () => {
+  const {cartItem,total} =useSelector(state=>state.cart);
+
+  console.log(cartItem,total,"navbar")
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -84,7 +88,7 @@ export const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+ 
 
   let pin = 713212;
   return (
@@ -161,7 +165,7 @@ export const Navbar = () => {
         <div style={{ display: "flex", width: "13px" }}>
           <IconButton aria-label="cart">
             <StyledBadge
-              badgeContent={5}
+              badgeContent={cartItem.length}
               color="secondary"
               style={{ fontSize: "5px" }}
             >
