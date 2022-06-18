@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import {useNavigate} from "react-router-dom"
 
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
@@ -75,7 +76,16 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
+
 export const Navbar = () => {
+const navigate=useNavigate()
+
+const handleLogin=()=>{
+   navigate("/Register")
+
+}
+
+
   const {cartItem,total} =useSelector(state=>state.cart);
 
   console.log(cartItem,total,"navbar")
@@ -175,10 +185,12 @@ export const Navbar = () => {
           <h4>cart</h4>
         </div>
 
-        <div className={styles.loginbtn}>
+        <div className={styles.loginbtn} onClick={handleLogin}>
           <Avatar   width="10px" />
-          <div></div>
-          signin/signup
+          <span>
+           signin/signup 
+          </span>
+          
         </div>
       </div>
     </div>

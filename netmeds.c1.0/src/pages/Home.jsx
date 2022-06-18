@@ -20,6 +20,7 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -64,6 +65,9 @@ export const Home = () => {
 
   const { cartItem, total } = useSelector((state) => state.cart);
 
+  const {user,isAuth}=useSelector(state=>state.auth.login);
+  console.log(cartItem)
+
   console.log(allproduct);
 
   useEffect(() => {
@@ -73,6 +77,8 @@ export const Home = () => {
   const addtoCart = (prod) => {
     dispatch(addToCart(prod));
   };
+
+  
 
   return (
     <div>

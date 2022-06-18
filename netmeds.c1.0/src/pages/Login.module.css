@@ -1,9 +1,26 @@
 .form{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin: 50px auto;
-    padding: 100px;
+   
     gap: 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  
 }
+
+.main{
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      width: 70%;
+      margin: 50px auto;
+      padding: 100px;
+      text-align: center;
+}
+
+@media only screen and (min-width: 880px)  {
+    .main {
+        width: 50%;
+    }
+  }
+  @media only screen and (min-width: 1080px)  {
+    .main {
+        width: 30%;
+    }
+  }
