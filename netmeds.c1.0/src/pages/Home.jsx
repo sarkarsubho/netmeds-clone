@@ -11,17 +11,17 @@ import { addToCart } from "../redux/cart/cart.action";
 
 import { useTheme } from "@mui/material/styles";
 
-import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+// import MobileStepper from "@mui/material/MobileStepper";
+// import Paper from "@mui/material/Paper";
+// import Typography from "@mui/material/Typography";
 
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+// import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+// import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
@@ -42,21 +42,21 @@ const images = [
 ];
 
 export const Home = () => {
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
+  // const theme = useTheme();
+  // const [activeStep, setActiveStep] = React.useState(0);
+  // const maxSteps = images.length;
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+  // const handleNext = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  // };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+  // const handleBack = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  // };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
+  // const handleStepChange = (step) => {
+  //   setActiveStep(step);
+  // };
 
   //corasel end
 
@@ -66,7 +66,7 @@ export const Home = () => {
   const { cartItem, total } = useSelector((state) => state.cart);
 
   const {user,isAuth}=useSelector(state=>state.auth.login);
-  console.log(cartItem)
+  console.log(user,isAuth)
 
   console.log(allproduct);
 
@@ -82,7 +82,7 @@ export const Home = () => {
 
   return (
     <div>
-       <Box sx={{ maxWidth: "95%", flexGrow: 1 ,margin:"auto"}}>
+       {/* <Box sx={{ maxWidth: "95%", flexGrow: 1 ,margin:"auto"}}>
       <Paper
         square
         elevation={0}
@@ -152,7 +152,7 @@ export const Home = () => {
           </Button>
         }
       />
-    </Box>
+    </Box> */}
        {/* carosel */}
      
       <div className={styles.cartitem}>

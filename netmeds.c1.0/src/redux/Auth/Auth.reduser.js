@@ -6,6 +6,7 @@ import {
   LOG_LOADING,
   LOG_SUCCESS,
 } from "./Auth.action";
+let token=localStorage.getItem("token");
 
 const initState = {
   register: {
@@ -16,8 +17,8 @@ const initState = {
   login: {
     loading: false,
     error: false,
-    isAuth:false,
-    user: {},
+    isAuth:!!token,
+    user: JSON.parse(localStorage.getItem("user")),
   },
 };
 
@@ -34,6 +35,8 @@ export const authReduser = (state = initState, { type, payload }) => {
     case LOG_LOADING:
       return { ...state, login: { ...state.login, loading: true,error:false } };
     case LOG_SUCCESS:
+      localStorage.setItem("user",JSON.stringify(payload));
+      localStorage.setItem("token",payload.token);
       return { ...state, login: { ...state.login, loading: false,error:false,user:{...state.login.user,...payload},isAuth:true } };
     case LOG_ERROR:
       return { ...state, login: { ...state.login, loading: false,error:true } };

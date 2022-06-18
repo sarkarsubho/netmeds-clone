@@ -24,13 +24,13 @@ const Login = () => {
     console.log(data);
      dispatch(login(JSON.stringify(data)));
      console.log(user)
-    //  if(isAuth ){
-    //     navigate("/")
-    //  }
+     
      {isAuth ? navigate("/"):navigate("/login")}
      console.log(user)
   };
-
+if(isAuth ){
+        navigate("/")
+     }
   return (
     <div className={styles.main}>
       <form onSubmit={handleSubmit} className={styles.form}>
