@@ -97,6 +97,30 @@
         "d": "applicable will be applied at checkout"
       },
       "image": "https://www.netmeds.com/images/product-v1/600x600/944718/venus_vsftp_pulse_oximeter_c101h1_0_0.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Venus VSFTP Pulse Oximeter (C101H1)",
+      "price": 1325,
+      "detail": {
+        "a": "This product cannot be returned for a refund or exchange.",
+        "b": "Mkt: Venus Surgical Agencies.",
+        "c": "Country of Origin: India.",
+        "d": "applicable will be applied at checkout"
+      },
+      "image": "https://www.netmeds.com/images/product-v1/600x600/944718/venus_vsftp_pulse_oximeter_c101h1_0_0.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Venus VSFTP Pulse Oximeter (C101H1)",
+      "price": 1325,
+      "detail": {
+        "a": "This product cannot be returned for a refund or exchange.",
+        "b": "Mkt: Venus Surgical Agencies.",
+        "c": "Country of Origin: India.",
+        "d": "applicable will be applied at checkout"
+      },
+      "image": "https://www.netmeds.com/images/product-v1/600x600/944718/venus_vsftp_pulse_oximeter_c101h1_0_0.jpg"
     }
   ]
 }
